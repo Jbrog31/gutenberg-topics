@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model artifacts
+data/models/
+data/processed/*.pkl
+*.pkl
+
+# Raw Gutenberg texts (can be re-downloaded)
+data/raw/
+
+# Streamlit cache
+.streamlit/
+
+# OS metadata
+.DS_Store
+
