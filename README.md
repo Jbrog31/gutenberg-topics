@@ -1,6 +1,6 @@
 Gutenberg Topic Modeling Project
 
-This project performs unsupervised topic modeling on six public-domain novels (some of my favorites) from Project Gutenberg. I will be using a Python-based pipeline that includes text acquisition, preprocessing, document–term matrix construction, topic modeling (LDA and NMF), evaluation, and an interactive dashboard for exploration.
+This small project performs unsupervised topic modeling on six public-domain novels (some of my favorites) from Project Gutenberg. I will be using a Python-based pipeline that includes text acquisition, preprocessing, document–term matrix construction, topic modeling (LDA and NMF), evaluation, and an interactive dashboard for exploration.
 
 The central question is whether topic models can reconstruct which chapters belong to which book if all chapters are mixed together. The project demonstrates that topic modeling captures meaningful thematic and stylistic structure across classic literary texts.
 
@@ -49,12 +49,12 @@ This structure supports a reproducible workflow suitable for research and versio
 
 Installation
 
-Clone the repository:
+Clone repository:
 
 git clone https://github.com/Jbrog31/gutenberg-topics.git
 cd gutenberg-topics
 
-Create and activate a virtual environment:
+Create and activate virtual environment:
 
 python -m venv .venv
 source .venv/bin/activate
@@ -87,11 +87,11 @@ python -m src.evaluation
 
 This outputs:
 
-A confusion matrix for both LDA and NMF
+- A confusion matrix for both LDA and NMF
 
-Chapter-level topic assignments
+- Chapter-level topic assignments
 
-chapter_topics.csv used by the dashboard
+- chapter_topics.csv used by the dashboard
 
 Interactive Dashboard
 
@@ -101,11 +101,11 @@ streamlit run app/streamlit_app.py
 
 The dashboard provides:
 
-Topic Explorer: Top terms per topic and topic–book associations
+- Topic Explorer: Top terms per topic and topic–book associations
 
-Chapter Explorer: Topic mixture visualization for individual chapters
+- Chapter Explorer: Topic mixture visualization for individual chapters
 
-UMAP Projection: A two-dimensional embedding of chapters colored by book
+- UMAP Projection: A two-dimensional embedding of chapters colored by book
 
 This enables qualitative inspection of topic structure and chapter clustering.
 
@@ -113,11 +113,11 @@ Results Summary
 
 The reconstruction experiment evaluates how well each model assigns chapters to their correct book based solely on topic composition. Using six topics:
 
-LDA achieves approximately 81% accuracy
+- LDA achieves approximately 81% accuracy
 
-NMF achieves approximately 85% accuracy
+- NMF achieves approximately 85% accuracy
 
-Books with stronger thematic consistency across chapters (e.g., Frankenstein, Dracula) cluster more distinctly, while books with fewer chapters or more uniform language exhibit weaker separation.
+- Books with stronger thematic consistency across chapters (e.g., Frankenstein, Dracula) cluster more distinctly, while books with fewer chapters or more uniform language exhibit weaker separation.
 
 Methodology
 
