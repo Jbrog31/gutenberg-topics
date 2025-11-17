@@ -23,7 +23,7 @@ The Time Machine (ID 35)
 All texts are downloaded directly from Gutenberg and are in the public domain.
 
 Project Structure
-
+'''
 gutenberg-topics/
 │
 ├── data/
@@ -44,7 +44,7 @@ gutenberg-topics/
 │
 ├── requirements.txt
 └── README.md
-
+'''
 This structure supports a reproducible workflow suitable for research and version control.
 
 Installation
