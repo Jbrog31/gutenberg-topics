@@ -51,7 +51,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/gutenberg-topics.git
+git clone https://github.com/Jbrog31/gutenberg-topics.git
 cd gutenberg-topics
 
 Create and activate a virtual environment:
