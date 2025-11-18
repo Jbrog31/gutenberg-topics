@@ -4,25 +4,20 @@ This small project performs unsupervised topic modeling on six public-domain nov
 
 The central question is whether topic models can reconstruct which chapters belong to which book if all chapters are mixed together. The project demonstrates that topic modeling captures meaningful thematic and stylistic structure across classic literary texts.
 
-Books Included
+*Books Included*
 
 The following novels from Project Gutenberg are used as the corpus:
 
-Frankenstein (ID 84)
-
-Dracula (ID 345)
-
-Dr Jekyll and Mr Hyde (ID 43)
-
-The Picture of Dorian Gray (ID 174)
-
-The War of the Worlds (ID 36)
-
-The Time Machine (ID 35)
+- Frankenstein (ID 84)
+- Dracula (ID 345)
+- Dr Jekyll and Mr Hyde (ID 43)
+- The Picture of Dorian Gray (ID 174)
+- The War of the Worlds (ID 36)
+- The Time Machine (ID 35)
 
 All texts are downloaded directly from Gutenberg and are in the public domain.
 
-Project Structure
+*Project Structure*
 '''
 gutenberg-topics/
 │
@@ -47,7 +42,7 @@ gutenberg-topics/
 '''
 This structure supports a reproducible workflow suitable for research and version control.
 
-Installation
+*Installation*
 
 Clone repository:
 
@@ -63,7 +58,7 @@ Install dependencies:
 
 pip install -r requirements.txt
 
-Workflow
+*Workflow*
 
 1. Download and clean the texts
 
@@ -88,12 +83,10 @@ python -m src.evaluation
 This outputs:
 
 - A confusion matrix for both LDA and NMF
-
 - Chapter-level topic assignments
-
 - chapter_topics.csv used by the dashboard
 
-Interactive Dashboard
+*Interactive Dashboard*
 
 After generating the topic assignments, launch the Streamlit app:
 
@@ -102,60 +95,44 @@ streamlit run app/streamlit_app.py
 The dashboard provides:
 
 - Topic Explorer: Top terms per topic and topic–book associations
-
 - Chapter Explorer: Topic mixture visualization for individual chapters
-
 - UMAP Projection: A two-dimensional embedding of chapters colored by book
 
 This enables qualitative inspection of topic structure and chapter clustering.
 
-Results Summary
+*Results Summary*
 
 The reconstruction experiment evaluates how well each model assigns chapters to their correct book based solely on topic composition. Using six topics:
 
 - LDA achieves approximately 81% accuracy
-
 - NMF achieves approximately 85% accuracy
-
 - Books with stronger thematic consistency across chapters (e.g., Frankenstein, Dracula) cluster more distinctly, while books with fewer chapters or more uniform language exhibit weaker separation.
 
-Methodology
+*Methodology*
 
 The analysis uses the following techniques:
 
 - Text acquisition and cleaning via HTTP requests
-
 - Simple chapter segmentation using heuristic regular expressions
-
 - Document–term matrix using unigrams and bigrams
-
 - Unsupervised topic modeling with:
-
 - Latent Dirichlet Allocation (scikit-learn)
-
 - Non-negative Matrix Factorization
-
 - UMAP dimensionality reduction for visualization
-
 - Evaluation with confusion matrices and standard classification metrics
 
 All code is modular and designed for extension, including the incorporation of additional texts, preprocessing steps, or modeling techniques.
 
-Future Extensions
+*Future Extensions*
 
 Possible improvements include:
 
 - Incorporating lemmatization using spaCy
-
 - Adding coherence score calculations
-
 - Trying alternative topic modeling frameworks (e.g., BERTopic)
-
 - Adding similarity search or chapter retrieval features
-
 - Deploying the dashboard using Streamlit Cloud
 
-License
+*License*
 
-All novels used in this project are in the public domain.
-All code in this repository is provided under the MIT License.
+All novels used in this project are in the public domain. All code in this repository is provided under the MIT License.
