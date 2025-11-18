@@ -1,10 +1,10 @@
-Gutenberg Topic Modeling Project
+***Gutenberg Topic Modeling Project***
 
 This small project performs unsupervised topic modeling on six public-domain novels (some of my favorites) from Project Gutenberg. I will be using a Python-based pipeline that includes text acquisition, preprocessing, document–term matrix construction, topic modeling (LDA and NMF), evaluation, and an interactive dashboard for exploration.
 
 The central question is whether topic models can reconstruct which chapters belong to which book if all chapters are mixed together. The project demonstrates that topic modeling captures meaningful thematic and stylistic structure across classic literary texts.
 
-*Books Included*
+***Books Included***
 
 The following novels from Project Gutenberg are used as the corpus:
 
@@ -17,7 +17,7 @@ The following novels from Project Gutenberg are used as the corpus:
 
 All texts are downloaded directly from Gutenberg and are in the public domain.
 
-*Project Structure*
+***Project Structure***
 '''
 gutenberg-topics/
 │
@@ -42,7 +42,7 @@ gutenberg-topics/
 '''
 This structure supports a reproducible workflow suitable for research and version control.
 
-*Installation*
+***Installation***
 
 Clone repository:
 
@@ -58,7 +58,7 @@ Install dependencies:
 
 pip install -r requirements.txt
 
-*Workflow*
+***Workflow***
 
 1. Download and clean the texts
 
@@ -86,7 +86,7 @@ This outputs:
 - Chapter-level topic assignments
 - chapter_topics.csv used by the dashboard
 
-*Interactive Dashboard*
+***Interactive Dashboard***
 
 After generating the topic assignments, launch the Streamlit app:
 
@@ -100,7 +100,7 @@ The dashboard provides:
 
 This enables qualitative inspection of topic structure and chapter clustering.
 
-*Results Summary*
+***Results Summary***
 
 The reconstruction experiment evaluates how well each model assigns chapters to their correct book based solely on topic composition. Using six topics:
 
@@ -108,7 +108,7 @@ The reconstruction experiment evaluates how well each model assigns chapters to 
 - NMF achieves approximately 85% accuracy
 - Books with stronger thematic consistency across chapters (e.g., Frankenstein, Dracula) cluster more distinctly, while books with fewer chapters or more uniform language exhibit weaker separation.
 
-*Methodology*
+***Methodology***
 
 The analysis uses the following techniques:
 
@@ -123,7 +123,7 @@ The analysis uses the following techniques:
 
 All code is modular and designed for extension, including the incorporation of additional texts, preprocessing steps, or modeling techniques.
 
-*Future Extensions*
+***Future Extensions***
 
 Possible improvements include:
 
@@ -133,6 +133,6 @@ Possible improvements include:
 - Adding similarity search or chapter retrieval features
 - Deploying the dashboard using Streamlit Cloud
 
-*License*
+***License***
 
 All novels used in this project are in the public domain. All code in this repository is provided under the MIT License.
