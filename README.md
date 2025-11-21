@@ -18,7 +18,7 @@ The following novels from Project Gutenberg are used as the corpus:
 All texts are downloaded directly from Gutenberg and are in the public domain.
 
 ***Project Structure***
-'''
+```
 gutenberg-topics/
 │
 ├── data/
@@ -39,47 +39,47 @@ gutenberg-topics/
 │
 ├── requirements.txt
 └── README.md
-'''
+```
 This structure supports a reproducible workflow suitable for research and version control.
 
 ***Installation***
 
 Clone repository:
-
+```
 git clone https://github.com/Jbrog31/gutenberg-topics.git
 cd gutenberg-topics
-
+```
 Create and activate virtual environment:
-
+```
 python -m venv .venv
 source .venv/bin/activate
-
+```
 Install dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 ***Workflow***
 
 1. Download and clean the texts
-
+```
 python -m src.gutenberg_utils
-
+```
 2. Segment books into chapters
-
+```
 python -m src.preprocessing
-
+```
 This produces data/processed/chapters.csv.
 
 3. Train topic models (LDA and NMF)
-
+```
 python -m src.topic_models
-
+```
 This step generates the document–term matrix and saves trained model artifacts.
 
 4. Evaluate reconstruction performance
-
+```
 python -m src.evaluation
-
+```
 This outputs:
 
 - A confusion matrix for both LDA and NMF
@@ -89,9 +89,9 @@ This outputs:
 ***Interactive Dashboard***
 
 After generating the topic assignments, launch the Streamlit app:
-
+```
 streamlit run app/streamlit_app.py
-
+```
 The dashboard provides:
 
 - Topic Explorer: Top terms per topic and topic–book associations
