@@ -125,13 +125,14 @@ All code is modular and designed for extension, including the incorporation of a
 
 ***Future Extensions***
 
-Possible improvements include:
+Possible improvements/ideas include:
 
 - Incorporating lemmatization using spaCy
 - Adding coherence score calculations
 - Trying alternative topic modeling frameworks (e.g., BERTopic)
 - Adding similarity search or chapter retrieval features
 - Deploying the dashboard using Streamlit Cloud
+- Using different books (non-fiction maybe?)
 
 ***License***
 
