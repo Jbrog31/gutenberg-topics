@@ -40,7 +40,6 @@ gutenberg-topics/
 ├── requirements.txt
 └── README.md
 ```
-This structure supports a reproducible workflow suitable for research and version control.
 
 ***Installation***
 
@@ -98,8 +97,6 @@ The dashboard provides:
 - Chapter Explorer: Topic mixture visualization for individual chapters
 - UMAP Projection: A two-dimensional embedding of chapters colored by book
 
-This enables qualitative inspection of topic structure and chapter clustering.
-
 ***Results Summary***
 
 The reconstruction experiment evaluates how well each model assigns chapters to their correct book based solely on topic composition. Using six topics:
@@ -120,8 +117,6 @@ The analysis uses the following techniques:
 - Non-negative Matrix Factorization
 - UMAP dimensionality reduction for visualization
 - Evaluation with confusion matrices and standard classification metrics
-
-All code is modular and designed for extension, including the incorporation of additional texts, preprocessing steps, or modeling techniques.
 
 ***Future Extensions***
 
